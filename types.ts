@@ -12,11 +12,4 @@ export interface CartItem extends Product {
   quantity: number;
 }
 
-export interface ChatMessage {
-  id: string;
-  role: 'user' | 'model';
-  text: string;
-  isThinking?: boolean;
-}
-
 export type ViewState = 'home' | 'shop';
