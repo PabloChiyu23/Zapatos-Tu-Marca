@@ -17,6 +17,24 @@ const PRODUCTS: Product[] = [
     features: ['Cuero Italiano', 'Suela de Cuero', 'Hecho a Mano']
   },
   {
+    id: '2',
+    name: 'Venetian Loafer',
+    price: 395,
+    category: 'Loafer',
+    description: 'Comodidad sin esfuerzo con ante cepillado a mano. Perfecto para el caballero moderno en movimiento.',
+    imageUrl: 'https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=800&auto=format&fit=crop',
+    features: ['Ante Premium', 'Flexible', 'Diseño Slip-on']
+  },
+  {
+    id: '3',
+    name: 'Roma Chelsea Boot',
+    price: 520,
+    category: 'Boots',
+    description: 'Silueta esbelta con elásticos reforzados. Construcción robusta para afrontar la ciudad con estilo.',
+    imageUrl: 'https://images.unsplash.com/photo-1638247025967-b4e38f787b76?q=80&w=800&auto=format&fit=crop',
+    features: ['Suela Vibram', 'Resistente al agua', 'Cosido Blake']
+  },
+  {
     id: '4',
     name: 'Torino Monk Strap',
     price: 480,
@@ -73,21 +91,21 @@ const App: React.FC = () => {
             className="w-full h-full object-cover opacity-60"
          />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent opacity-90" />
       
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-start text-white">
-        <span className="text-aurelio-300 tracking-[0.3em] uppercase text-sm mb-4 animate-fade-in-up">Excelencia Italiana</span>
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
-          Pasos que <br/> <span className="text-aurelio-200 italic">Definen</span> Legados.
+        <span className="text-aurelio-300 tracking-[0.3em] uppercase text-sm mb-6 animate-fade-in-up font-bold">Excelencia Italiana</span>
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-none mb-8 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          Pasos que <br/> <span className="text-aurelio-300 italic">Definen</span> Legados.
         </h1>
-        <p className="max-w-xl text-lg text-gray-300 font-light mb-10 leading-relaxed">
+        <p className="max-w-xl text-lg text-gray-200 font-light mb-10 leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
           Cada par es una obra maestra, esculpida a mano con cuero de la más alta calidad. 
           Descubre la fusión perfecta entre la tradición centenaria y el confort moderno.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6">
+        <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
           <button 
             onClick={() => setView('shop')}
-            className="px-8 py-4 bg-aurelio-200 text-aurelio-900 font-bold uppercase tracking-widest hover:bg-white transition-colors"
+            className="px-10 py-4 bg-aurelio-300 text-aurelio-950 font-bold uppercase tracking-widest hover:bg-white transition-all duration-300 transform hover:scale-105"
           >
             Ver Colección
           </button>
@@ -104,26 +122,26 @@ const App: React.FC = () => {
     <div className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-          <div className="flex flex-col items-center">
-             <div className="w-16 h-16 rounded-full bg-aurelio-50 flex items-center justify-center mb-6 text-aurelio-800">
-                <ShieldCheck size={32} strokeWidth={1} />
+          <div className="flex flex-col items-center group">
+             <div className="w-20 h-20 rounded-full bg-aurelio-50 flex items-center justify-center mb-6 text-aurelio-800 transition-colors group-hover:bg-aurelio-100">
+                <ShieldCheck size={36} strokeWidth={1} />
              </div>
              <h3 className="text-xl font-serif text-aurelio-900 mb-3">Garantía de Por Vida</h3>
-             <p className="text-slate-500 font-light">Reparamos cualquier defecto de fabricación. Su inversión está asegurada.</p>
+             <p className="text-slate-500 font-light leading-relaxed">Reparamos cualquier defecto de fabricación. Su inversión está asegurada.</p>
           </div>
-          <div className="flex flex-col items-center">
-             <div className="w-16 h-16 rounded-full bg-aurelio-50 flex items-center justify-center mb-6 text-aurelio-800">
-                <Star size={32} strokeWidth={1} />
+          <div className="flex flex-col items-center group">
+             <div className="w-20 h-20 rounded-full bg-aurelio-50 flex items-center justify-center mb-6 text-aurelio-800 transition-colors group-hover:bg-aurelio-100">
+                <Star size={36} strokeWidth={1} />
              </div>
              <h3 className="text-xl font-serif text-aurelio-900 mb-3">Artesanía Maestra</h3>
-             <p className="text-slate-500 font-light">Más de 200 pasos manuales por par, ejecutados por maestros artesanos en Florencia.</p>
+             <p className="text-slate-500 font-light leading-relaxed">Más de 200 pasos manuales por par, ejecutados por maestros artesanos en Florencia.</p>
           </div>
-          <div className="flex flex-col items-center">
-             <div className="w-16 h-16 rounded-full bg-aurelio-50 flex items-center justify-center mb-6 text-aurelio-800">
-                <Truck size={32} strokeWidth={1} />
+          <div className="flex flex-col items-center group">
+             <div className="w-20 h-20 rounded-full bg-aurelio-50 flex items-center justify-center mb-6 text-aurelio-800 transition-colors group-hover:bg-aurelio-100">
+                <Truck size={36} strokeWidth={1} />
              </div>
              <h3 className="text-xl font-serif text-aurelio-900 mb-3">Envío Global</h3>
-             <p className="text-slate-500 font-light">Entrega express asegurada a cualquier parte del mundo en embalaje de lujo.</p>
+             <p className="text-slate-500 font-light leading-relaxed">Entrega express asegurada a cualquier parte del mundo en embalaje de lujo.</p>
           </div>
         </div>
       </div>
@@ -157,17 +175,18 @@ const App: React.FC = () => {
             <div className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <span className="text-aurelio-600 tracking-widest uppercase text-sm font-bold">Favoritos de la Temporada</span>
-                <h2 className="text-4xl font-serif text-aurelio-900 mt-3">Lo Más Exclusivo</h2>
+                <h2 className="text-4xl font-serif text-aurelio-900 mt-3 italic">Lo Más Exclusivo</h2>
+                <div className="w-24 h-1 bg-aurelio-200 mx-auto mt-6"></div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-12 max-w-4xl mx-auto">
                 {PRODUCTS.slice(0, 2).map(product => (
                   <ProductCard key={product.id} product={product} onAddToCart={addToCart} />
                 ))}
               </div>
-              <div className="mt-16 text-center">
+              <div className="mt-20 text-center">
                 <button 
                   onClick={() => setView('shop')}
-                  className="inline-block border-b border-aurelio-900 text-aurelio-900 pb-1 uppercase tracking-widest hover:text-aurelio-600 hover:border-aurelio-600 transition-colors"
+                  className="inline-block border-b-2 border-aurelio-900 text-aurelio-900 pb-2 text-lg uppercase tracking-widest hover:text-aurelio-600 hover:border-aurelio-600 transition-colors"
                 >
                   Ver Todo el Catálogo
                 </button>
@@ -178,11 +197,14 @@ const App: React.FC = () => {
 
         {view === 'shop' && (
           <div className="pt-12 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
-            <div className="flex flex-col md:flex-row justify-between items-baseline mb-12 border-b border-aurelio-200 pb-6">
-              <h1 className="text-4xl font-serif text-aurelio-900">Colección Maestra</h1>
-              <p className="text-slate-500 mt-2 md:mt-0">{PRODUCTS.length} Productos exclusivos</p>
+            <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 border-b border-aurelio-200 pb-8">
+              <div>
+                <h1 className="text-5xl font-serif text-aurelio-900 mb-2">Colección Maestra</h1>
+                <p className="text-aurelio-600 uppercase tracking-widest text-sm font-bold">Edición Limitada 2024</p>
+              </div>
+              <p className="text-slate-500 mt-4 md:mt-0 font-light text-lg">{PRODUCTS.length} Productos exclusivos</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-16 max-w-5xl mx-auto">
               {PRODUCTS.map(product => (
                 <ProductCard key={product.id} product={product} onAddToCart={addToCart} />
               ))}
@@ -192,33 +214,33 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-aurelio-200 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-white border-t border-aurelio-200 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
-            <span className="font-serif text-2xl font-bold text-aurelio-900">AURELIO</span>
-            <p className="mt-4 text-slate-500 font-light max-w-xs">
-              Redefiniendo el lujo a través de la artesanía tradicional y la innovación digital. Hecho a mano en Italia, para el mundo.
+            <span className="font-serif text-3xl font-bold text-aurelio-900 tracking-tight">AURELIO</span>
+            <p className="mt-6 text-slate-500 font-light max-w-sm leading-relaxed text-lg">
+              Redefiniendo el lujo a través de la artesanía tradicional y la innovación. Hecho a mano en Italia, para el caballero moderno del mundo.
             </p>
           </div>
           <div>
-            <h4 className="font-bold text-aurelio-900 uppercase tracking-widest text-sm mb-4">Cliente</h4>
-            <ul className="space-y-2 text-slate-500 text-sm font-light">
-              <li><a href="#" className="hover:text-aurelio-700">Envíos y Devoluciones</a></li>
-              <li><a href="#" className="hover:text-aurelio-700">Guía de Tallas</a></li>
-              <li><a href="#" className="hover:text-aurelio-700">Cuidado del Cuero</a></li>
-              <li><a href="#" className="hover:text-aurelio-700">Contactar Concierge</a></li>
+            <h4 className="font-bold text-aurelio-900 uppercase tracking-widest text-sm mb-6">Cliente</h4>
+            <ul className="space-y-4 text-slate-500 text-sm font-light">
+              <li><a href="#" className="hover:text-aurelio-700 hover:underline underline-offset-4 decoration-aurelio-300">Envíos y Devoluciones</a></li>
+              <li><a href="#" className="hover:text-aurelio-700 hover:underline underline-offset-4 decoration-aurelio-300">Guía de Tallas</a></li>
+              <li><a href="#" className="hover:text-aurelio-700 hover:underline underline-offset-4 decoration-aurelio-300">Cuidado del Cuero</a></li>
+              <li><a href="#" className="hover:text-aurelio-700 hover:underline underline-offset-4 decoration-aurelio-300">Contactar Concierge</a></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-aurelio-900 uppercase tracking-widest text-sm mb-4">Legal</h4>
-            <ul className="space-y-2 text-slate-500 text-sm font-light">
-              <li><a href="#" className="hover:text-aurelio-700">Términos de Servicio</a></li>
-              <li><a href="#" className="hover:text-aurelio-700">Política de Privacidad</a></li>
+            <h4 className="font-bold text-aurelio-900 uppercase tracking-widest text-sm mb-6">Legal</h4>
+            <ul className="space-y-4 text-slate-500 text-sm font-light">
+              <li><a href="#" className="hover:text-aurelio-700 hover:underline underline-offset-4 decoration-aurelio-300">Términos de Servicio</a></li>
+              <li><a href="#" className="hover:text-aurelio-700 hover:underline underline-offset-4 decoration-aurelio-300">Política de Privacidad</a></li>
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-aurelio-100 text-center text-xs text-slate-400 uppercase tracking-widest">
-          &copy; {new Date().getFullYear()} Aurelio Footwear. Todos los derechos reservados.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-aurelio-100 text-center text-xs text-slate-400 uppercase tracking-widest">
+          &copy; {new Date().getFullYear()} Aurelio Footwear. Artesanía Italiana.
         </div>
       </footer>
     </div>
