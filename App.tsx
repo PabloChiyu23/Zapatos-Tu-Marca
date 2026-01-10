@@ -42,6 +42,24 @@ const PRODUCTS: Product[] = [
     description: 'Doble hebilla para una declaración de estilo audaz. Acabado en coñac añejo con pátina manual.',
     imageUrl: 'https://images.unsplash.com/photo-1478186111890-6eb322cbca1d?q=80&w=800&auto=format&fit=crop',
     features: ['Hebillas de latón', 'Puntera pulida', 'Forro de piel']
+  },
+  {
+    id: '5',
+    name: 'Napoli Suede Driver',
+    price: 325,
+    category: 'Driver',
+    description: 'El compañero perfecto para el fin de semana. Ante suave con gomminos icónicos para un agarre superior.',
+    imageUrl: 'https://images.unsplash.com/photo-1617606002779-51d866ead1d1?q=80&w=800&auto=format&fit=crop',
+    features: ['Suela de goma', 'Ante repelente al agua', 'Hecho a mano']
+  },
+  {
+    id: '6',
+    name: 'Siena Wholecut',
+    price: 550,
+    category: 'Oxford',
+    description: 'La prueba definitiva de la habilidad del zapatero. Una sola pieza de cuero impecable, sin costuras visibles.',
+    imageUrl: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=800&auto=format&fit=crop',
+    features: ['Corte entero', 'Pátina museo', 'Suela de cuero cerrada']
   }
 ];
 
@@ -204,7 +222,7 @@ const App: React.FC = () => {
               </div>
               <p className="text-slate-500 mt-4 md:mt-0 font-light text-lg">{PRODUCTS.length} Productos exclusivos</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-16 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-6xl mx-auto">
               {PRODUCTS.map(product => (
                 <ProductCard key={product.id} product={product} onAddToCart={addToCart} />
               ))}
